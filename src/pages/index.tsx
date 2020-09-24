@@ -9,6 +9,7 @@ import { GET_PRODUCTS } from '../graphql/product/product.query'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Card } from '../components/ui-kits/Card'
+import Router from 'next/router'
 
 export const HomeContainer = styled.div``
 
@@ -29,6 +30,7 @@ function Home() {
       },
     },
   })
+
   if (error) return <h1>Error</h1>
   if (loading) return <h1>Loading...</h1>
 
@@ -36,7 +38,6 @@ function Home() {
   if (!products || !products.length) {
     return <p>Not found</p>
   }
-  console.log(products, data)
   return (
     <>
       <Head>
@@ -60,7 +61,7 @@ function Home() {
               imageURL={data.imgUrl}
               buttonGroups={
                 <>
-                  <Button>View</Button>
+                  <Button onClick={() => Router.push(`/product/${data.id}`)}>View</Button>
                   <Button
                     onClick={() => {
                       console.log(data.id)

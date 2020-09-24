@@ -17,3 +17,22 @@ export const GET_PRODUCTS = gql`
     }
   }
 `
+
+export const GET_PRODUCTS_DETAIL = gql`
+  query getProductDetail($input: GetProductDetailInput!) {
+    getProductDetail(input: $input) {
+      id
+      name
+      sku
+      price
+      finalPrice
+      promotionPercent
+      description
+      namePath
+      imgUrl
+      imgUrlMob
+      image
+      images
+    }
+  }
+`

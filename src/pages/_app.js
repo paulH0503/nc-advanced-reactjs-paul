@@ -1,6 +1,7 @@
 import * as Sentry from '@sentry/react'
 import { Integrations } from '@sentry/tracing'
 import React from 'react'
+import '../../antd.less'
 
 Sentry.init({
   dsn: 'https://fbd0146fa6f84d02b1ef1c2daabba370@o450209.ingest.sentry.io/5434446',
