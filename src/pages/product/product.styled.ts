@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const ImgProduct = styled.img`
+const ImgProduct = styled.img`
   color: #fff;
   width: 100%;
   text-align: center;
@@ -26,3 +26,5 @@ export const PriceProduct = styled.p`
       margin-left: 8px;
     `}
 `
+
+export default ImgProduct

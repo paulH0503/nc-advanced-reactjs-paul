@@ -9,7 +9,7 @@ import { GET_PRODUCTS, GET_PRODUCTS_DETAIL } from '../../graphql/product/product
 import { GetStaticProps } from 'next'
 import { Button, Card } from 'antd'
 import NCSlider from './slides'
-import { ImgProduct, PriceProduct } from './slides.styled'
+import ImgProduct, { PriceProduct } from './product.styled'
 
 function ProductDetail(props) {
   const router = useRouter()
