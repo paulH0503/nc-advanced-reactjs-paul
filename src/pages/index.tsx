@@ -46,14 +46,7 @@ function Home() {
       </Head>
       <Header />
       <Layout>
-        <button
-          onClick={() => {
-            throw Error('345')
-          }}
-        >
-          12 Break the world
-        </button>
-        ;
+        <button>12 Break the world</button>;
         <StyledHomeBody>
           {products.map((data) => (
             <Card
